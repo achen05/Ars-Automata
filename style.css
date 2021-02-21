@@ -1,0 +1,196 @@
+@font-face {
+  font-family: FraktionMono-Bold;
+  src: url("fonts/FraktionMono-Bold.otf");
+}
+
+@font-face {
+  font-family: FraktionMono-Regular;
+  src: url("fonts/FraktionMono-Regular.otf");
+}
+
+@font-face {
+  font-family: NeueMachina-Ultrabold;
+  src: url("fonts/NeueMachina-Ultrabold.otf");
+}
+
+@font-face {
+  font-family: NeueMachina-Regular;
+  src: url("fonts/NeueMachina-Regular.otf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+  background: #7c7d73;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #7c7d73;
+}
+
+.websiteContainer {
+  height: 100%;
+  width: 100%;
+  max-width: 602px;
+
+}
+
+.headerContainer {
+  position: fixed;
+  z-index: 2;
+  background-color: #7c7d73;
+  padding-top: 24px;
+  height: 64px;
+  width: 100%;
+  max-width: 602px;
+  border-bottom: 1px solid black;
+  text-align: left;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.headerText {
+  padding-left: 24px;
+  font-size: 20px;
+  text-decoration: none;
+  color: black;
+  letter-spacing: -1px;
+  font-family: NeueMachina-Regular;
+}
+
+#canvasContainer {
+  position: fixed;
+  top: 64px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+
+}
+
+.introductionContainer {
+  border-top: 1px solid black;
+  width: 100%;
+  height: auto;
+  position: relative;
+  display: block;
+  top: 464px;
+  background-color: #7c7d73;
+  text-align: left;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.introductionText {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  width: 92%;
+  font-family: Inter-Regular;
+  letter-spacing: -0.5px;
+  font-size: 20px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  line-height: 24px;
+}
+
+.collapsibleContainer {
+  display: block;
+  width: 100%;
+  max-width: 602px;
+  position: relative;
+  top: 464px;
+  border-left: 1px solid black;
+  border-right: 1px solid black;
+}
+
+.collapsible {
+  background-color: #7c7d73;
+  color: black;
+  cursor: pointer;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  border-top: 1px solid black;
+  font-family: Inter-SemiBold;
+  letter-spacing: -0.6px;
+  vertical-align: middle;
+}
+
+.active, .collapsible:hover {
+
+}
+
+.collapsible:after {
+  content: '\002B';
+  color: black;
+  float: right;
+  margin-left: 5px;
+}
+
+.active:after {
+  content: "\2212";
+}
+
+.content {
+  width: auto;
+  padding: 0 24px;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+  text-align: left;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: -0.5px;
+  background-color: #7c7d73;
+}
+
+.contentContainer {
+  padding-top: 16px;
+  padding-bottom: 36px;
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  line-height: 22px;
+}
+
+#lastCollapsibleContent {
+  border-bottom: 1px solid black;
+}
+
+.whiteSpace {
+  height: 80px;
+
+}
+
+@media screen and (max-width: 600px) {
+
+  .headerContainer {
+    border-left: 1px solid #7c7d73;
+    border-right: 1px solid #7c7d73;
+  }
+
+  #canvasContainer {
+    border-left: 0px solid black;
+    border-right: 0px solid black;
+
+  }
+
+  .introductionContainer {
+    border-left: 1px solid #7c7d73;
+    border-right: 1px solid #7c7d73;
+  }
+
+  .collapsibleContainer {
+    border-left: 1px solid #7c7d73;
+    border-right: 1px solid #7c7d73;
+  }
+
+}
