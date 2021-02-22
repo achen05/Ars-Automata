@@ -9,6 +9,11 @@
 }
 
 @font-face {
+  font-family: FraktionSans-Bold;
+  src: url("fonts/FraktionSans-Bold.otf");
+}
+
+@font-face {
   font-family: NeueMachina-Ultrabold;
   src: url("fonts/NeueMachina-Ultrabold.otf");
 }
@@ -57,7 +62,7 @@ body {
   text-decoration: none;
   color: black;
   letter-spacing: -1px;
-  font-family: NeueMachina-Regular;
+  font-family: NeueMachina-Ultrabold;
 }
 
 #canvasContainer {
@@ -86,9 +91,9 @@ body {
   -ms-hyphens: auto;
   hyphens: auto;
   width: 92%;
-  font-family: Inter-Regular;
-  letter-spacing: -0.5px;
-  font-size: 20px;
+  font-family: FraktionMono-Regular;
+  letter-spacing: -1px;
+  font-size: 18px;
   padding-left: 24px;
   padding-bottom: 24px;
   padding-top: 24px;
@@ -119,8 +124,8 @@ body {
   outline: none;
   font-size: 20px;
   border-top: 1px solid black;
-  font-family: Inter-SemiBold;
-  letter-spacing: -0.6px;
+  font-family: FraktionMono-Bold;
+  letter-spacing: -1px;
   vertical-align: middle;
 }
 
@@ -147,6 +152,7 @@ body {
   transition: max-height 0.2s ease-out;
   text-align: left;
   font-size: 18px;
+  font-family: FraktionMono-Regular;
   line-height: 22px;
   letter-spacing: -0.5px;
   background-color: #7c7d73;
