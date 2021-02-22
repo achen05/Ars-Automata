@@ -65,17 +65,17 @@ body {
   font-family: NeueMachina-Ultrabold;
 }
 
-.homeDisplayContainer {
-  position: fixed;
-  height: 384px;
+#homeDisplayContainer {
   width: 100%;
   max-width: 602px;
+  height: 602px;
   position: fixed;
   border-left: 1px solid black;
   border-right: 1px solid black;
+  padding-top: 180px;
   font-family: NeueMachina-Ultrabold;
   font-size: 36px;
-  padding-top: 180px;
+
 
 }
 
@@ -238,7 +238,7 @@ body {
     border-right: 1px solid #7c7d73;
   }
 
-  .homeDisplayContainer {
+  #homeDisplayContainer {
     border-left: 0px solid black;
     border-right: 0px solid black;
 
