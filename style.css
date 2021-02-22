@@ -74,7 +74,7 @@ body {
   height: auto;
   position: relative;
   display: block;
-  top: 464px;
+  top: 384px;
   background-color: #7c7d73;
   text-align: left;
   border-left: 1px solid black;
@@ -100,7 +100,7 @@ body {
   width: 100%;
   max-width: 602px;
   position: relative;
-  top: 464px;
+  top: 384px;
   border-left: 1px solid black;
   border-right: 1px solid black;
 }
@@ -166,7 +166,9 @@ body {
 }
 
 .whiteSpace {
+  position: relative;
   height: 80px;
+  border-bottom: 1px solid black;
 
 }
 
