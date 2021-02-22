@@ -66,6 +66,7 @@ body {
 }
 
 .homeDisplayContainer {
+  position: fixed;
   height: 384px;
   width: 100%;
   max-width: 602px;
