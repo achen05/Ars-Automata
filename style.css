@@ -100,6 +100,45 @@ body {
   line-height: 24px;
 }
 
+.mainPageButton {
+  background-color: #7c7d73;
+  color: black;
+  cursor: pointer;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  border-top: 1px solid black;
+  font-family: FraktionMono-Bold;
+  letter-spacing: -1.6px;
+  vertical-align: middle;
+}
+
+.mainPageButtonInactive {
+  background-color: #7c7d73;
+  color: #565751;
+  cursor: pointer;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  border-top: 1px solid black;
+  font-family: FraktionMono-Bold;
+  letter-spacing: -1.6px;
+  vertical-align: middle;
+}
+
+
 .collapsibleContainer {
   display: block;
   width: 100%;
@@ -173,8 +212,7 @@ body {
 
 .whiteSpace {
   position: relative;
-  height: 80px;
-  border-bottom: 1px solid black;
+  height: 100px;
 
 }
 
