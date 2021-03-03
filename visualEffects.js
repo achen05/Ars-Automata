@@ -1,4 +1,4 @@
-var example = [
+var sequence = [
   'ARS AUTOMATA',
   'ARS AUTOMATA',
   'A10 A1TOM1TA',
@@ -20,13 +20,13 @@ var example = [
         textSequence(0);
         function textSequence(i) {
 
-            if (example.length > i) {
+            if (sequence.length > i) {
                 setTimeout(function() {
-                    document.getElementById("sequence").innerHTML = example[i];
+                    document.getElementById("sequence").innerHTML = sequence[i];
                     textSequence(++i);
                 }, 50); // 1 second (in milliseconds)
 
-            } else if (example.length == i) { // Loop
+            } else if (sequence.length == i) { // Loop
                 textSequence(0);
             }
 

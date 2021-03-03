@@ -1,3 +1,34 @@
+//MIT License
+
+//Copyright (c) 2019 Coding Train
+
+//Permission is hereby granted, free of charge, to any person obtaining a copy
+//of this software and associated documentation files (the "Software"), to deal
+//in the Software without restriction, including without limitation the rights
+//to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+//copies of the Software, and to permit persons to whom the Software is
+//furnished to do so, subject to the following conditions:
+
+//The above copyright notice and this permission notice shall be included in all
+//copies or substantial portions of the Software.
+
+//THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+//IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+//FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+//AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+//LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+//OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+//SOFTWARE.
+
+// Daniel Shiffman
+// http://codingtra.in
+// http://patreon.com/codingtrain
+
+// Game of Life
+// Video: https://youtu.be/FWSR_7kZuYg
+
+// Modified and adapted by Aldon Chen
+
 function make2DArray(cols, rows) {
   let array = new Array(cols);
   for(let i = 0; i < array.length; i++) {
@@ -45,42 +76,36 @@ function draw() {
 
   let next = make2DArray(cols, rows);
 
-  for (let i = 0; i < cols; i++) {
-    for (let j = 0; j < rows; j++) {
+// Compute next based on grid
+for (let i = 0; i < cols; i++) {
+  for (let j = 0; j < rows; j++) {
+    let state = grid[i][j];
+    // Count live neighbors!
+    let sum = 0;
+    let neighbors = countNeighbors(grid, i, j);
 
-      let state = grid[i][j];
-
-      if (i == 0 || i == cols - 1 || j == 0 || j == rows - 1) {
-        next[i][j] = state;
-      } else {
-
-      let sum = 0;
-      let neighbors = countNeighbors(grid, i, j);
-
-
-      if (state == 0 && neighbors == 3) {
-        next[i][j] = 1;
-      }
-      else if (state == 1 && neighbors < 2 || neighbors > 3) {
-        next[i][j] = 0;
-      }
-      else {
-        next[i][j] = state;
-      }
-    }
+    if (state == 0 && neighbors == 3) {
+      next[i][j] = 1;
+    } else if (state == 1 && (neighbors < 2 || neighbors > 3)) {
+      next[i][j] = 0;
+    } else {
+      next[i][j] = state;
     }
   }
-  grid = next;
+}
 
+grid = next;
 }
 
 function countNeighbors(grid, x, y) {
-  let sum = 0;
-  for (let i = -1; i < 2; i++) {
-    for (let j = -1; j < 2; j++) {
-      sum += grid[x + i][y + j];
-    }
+let sum = 0;
+for (let i = -1; i < 2; i++) {
+  for (let j = -1; j < 2; j++) {
+    let col = (x + i + cols) % cols;
+    let row = (y + j + rows) % rows;
+    sum += grid[col][row];
   }
-  sum -= grid[x][y];
-  return sum;
+}
+sum -= grid[x][y];
+return sum;
 }

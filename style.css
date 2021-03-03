@@ -9,11 +9,6 @@
 }
 
 @font-face {
-  font-family: FraktionSans-Bold;
-  src: url("fonts/FraktionSans-Bold.otf");
-}
-
-@font-face {
   font-family: NeueMachina-Ultrabold;
   src: url("fonts/NeueMachina-Ultrabold.otf");
 }
@@ -75,6 +70,7 @@ body {
   padding-top: 180px;
   font-family: NeueMachina-Ultrabold;
   font-size: 36px;
+  line-height: 20px;
 
 
 }
@@ -140,6 +136,44 @@ body {
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 16px;
+  padding-bottom: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 20px;
+  border-top: 1px solid black;
+  font-family: FraktionMono-Bold;
+  letter-spacing: -1.6px;
+  vertical-align: middle;
+}
+
+.nextButton {
+  background-color: #7c7d73;
+  color: black;
+  cursor: pointer;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+  width: 100%;
+  border: none;
+  text-align: right;
+  outline: none;
+  font-size: 20px;
+  border-top: 1px solid black;
+  font-family: FraktionMono-Bold;
+  letter-spacing: -1.6px;
+  vertical-align: middle;
+}
+
+.previousButton {
+  background-color: #7c7d73;
+  color: black;
+  cursor: pointer;
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-top: 16px;
   padding-bottom: 16px;
   width: 100%;
   border: none;
@@ -170,7 +204,7 @@ body {
   padding-left: 24px;
   padding-right: 24px;
   padding-top: 16px;
-  padding-bottom: 16px;
+  padding-bottom: 18px;
   width: 100%;
   border: none;
   text-align: left;
