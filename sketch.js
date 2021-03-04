@@ -75,27 +75,29 @@ function draw() {
     }
   }
 
-  let next = make2DArray(cols, rows);
+  let nextGeneration = make2DArray(cols, rows);
 
-// Compute next based on grid
-for (let i = 0; i < cols; i++) {
-  for (let j = 0; j < rows; j++) {
-    let state = grid[i][j];
+// Compute nextGeneration based on grid
+for (let indexX = 0; indexX < cols; indexX++) {
+  for (let indexY = 0; indexY < rows; indexY++) {
+    let state = grid[indexX][indexY];
     // Count live neighbors!
     let sum = 0;
-    let neighbors = countNeighbors(grid, i, j);
+    let neighbors = countNeighbors(grid, indexX, indexY);
 
     if (state == 0 && neighbors == 3) {
-      next[i][j] = 1;
-    } else if (state == 1 && (neighbors < 2 || neighbors > 3)) {
-      next[i][j] = 0;
-    } else {
-      next[i][j] = state;
+      nextGeneration[indexX][indexY] = 1;
+    }
+    else if (state == 1 && (neighbors < 2 || neighbors > 3)) {
+      nextGeneration[indexX][indexY] = 0;
+    }
+    else {
+      nextGeneration[indexX][indexY] = state;
     }
   }
 }
 
-grid = next;
+grid = nextGeneration;
 }
 
 function countNeighbors(grid, x, y) {

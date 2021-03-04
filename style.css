@@ -110,6 +110,20 @@ body {
   line-height: 24px;
 }
 
+.introductionTextAlt {
+  -webkit-hyphens: auto;
+  -ms-hyphens: auto;
+  hyphens: auto;
+  width: 92%;
+  font-family: FraktionMono-Bold;
+  letter-spacing: -1px;
+  font-size: 20px;
+  padding-left: 24px;
+  padding-bottom: 24px;
+  padding-top: 24px;
+  line-height: 24px;
+}
+
 .mainPageButton {
   background-color: #7c7d73;
   color: black;
